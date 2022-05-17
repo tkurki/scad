@@ -6,7 +6,30 @@ slab_thickness = 10;
 first_hole_from_slab_bottom = 40;
 hole_distance = 54;
 
-linear_extrude(slab_thickness) circle(slab_radius);
+difference() {
+ linear_extrude(slab_thickness) circle(slab_radius);
+ rotate([0,0,0])
+  translate([0,22,0])
+   union() {
+    cylinder (h = 150, r=2, center = true, $fn=100);
+    translate([0,0,10])
+    cylinder (h = 5, r=5, center = true, $fn=100);
+   }
+ rotate([0,0,120])
+  translate([0,22,0])
+   union() {
+    cylinder (h = 150, r=2, center = true, $fn=100);
+    translate([0,0,10])
+    cylinder (h = 5, r=5, center = true, $fn=100);
+   }
+ rotate([0,0,240])
+  translate([0,22,0])
+   union() {
+    cylinder (h = 150, r=2, center = true, $fn=100);
+    translate([0,0,10])
+    cylinder (h = 5, r=5, center = true, $fn=100);
+   }
+}
 difference() {
 translate([slab_radius - support_length,-support_width / 2,0]) {
 cube([support_length,support_width,support_height]);
