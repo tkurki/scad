@@ -1,5 +1,5 @@
 support_width = 16;
-support_length = 15;
+support_length = 10;
 slab_radius = 75 / 2;
 support_height = 120;
 slab_thickness = 10;
@@ -7,7 +7,7 @@ first_hole_from_slab_bottom = 40;
 hole_distance = 54;
 
 difference() {
- linear_extrude(slab_thickness) circle(slab_radius);
+ linear_extrude(slab_thickness) circle(slab_radius, $fn=100);
  rotate([0,0,0])
   translate([0,22,0])
    union() {
