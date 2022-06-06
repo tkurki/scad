@@ -1,9 +1,9 @@
-support_width = 16;
+support_width = 11;
 support_length = 10;
 slab_radius = 75 / 2;
-support_height = 120;
+support_height = 124;
 slab_thickness = 10;
-first_hole_from_slab_bottom = 40;
+first_hole_from_slab_bottom = 44;
 hole_distance = 54;
 
 difference() {
@@ -13,21 +13,21 @@ difference() {
    union() {
     cylinder (h = 150, r=2, center = true, $fn=100);
     translate([0,0,10])
-    cylinder (h = 5, r=5, center = true, $fn=100);
+    cylinder (h = 8, r=5, center = true, $fn=100);
    }
  rotate([0,0,120])
   translate([0,22,0])
    union() {
     cylinder (h = 150, r=2, center = true, $fn=100);
     translate([0,0,10])
-    cylinder (h = 5, r=5, center = true, $fn=100);
+    cylinder (h = 8, r=5, center = true, $fn=100);
    }
  rotate([0,0,240])
   translate([0,22,0])
    union() {
     cylinder (h = 150, r=2, center = true, $fn=100);
     translate([0,0,10])
-    cylinder (h = 5, r=5, center = true, $fn=100);
+    cylinder (h = 8, r=5, center = true, $fn=100);
    }
 }
 difference() {
