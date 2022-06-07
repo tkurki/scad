@@ -1,5 +1,5 @@
-width = 40;
-length = 70;
+width = 57; //53
+length = 88; //84
 height = 5;
 channel_radius = 2;
 channel_length = length-10;
