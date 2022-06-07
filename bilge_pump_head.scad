@@ -13,10 +13,16 @@ union() {
   cube([width, length,height]);
     translate([width / 2, length / 2, 0])
       linear_extrude(hole_height) circle(hole_outer_radius, $fn=100);
+    translate([width / 2, length / 2 + hole_outer_radius, hole_height])
+      rotate([90,0,0])
+        linear_extrude(hole_height +  15) circle(hole_outer_radius, $fn=100);
  }
  translate([width / 2, length / 2, 0])
    translate([0,0, -1])
      linear_extrude(hole_height +2) circle(hole_inner_radius, $fn=100);
+ translate([width / 2, length / 2 + hole_outer_radius - (hole_outer_radius - hole_inner_radius), hole_height])
+      rotate([90,0,0])
+        linear_extrude(hole_height + 15) circle(hole_inner_radius, $fn=100);
  
  translate([width/2,length - ((length - channel_length) / 2),-channel_radius / 1.2])
    rotate([90,0,0])
