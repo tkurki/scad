@@ -26,8 +26,8 @@ difference() {
   cube([slot_slab_width, 200, slot_thickness_]);
 
   //opening
-  translate([edge_width,edge_width,backplate_thickness])
-  cube([EPAPER_WIDTH - 2 * EPAPER_EDGE_WIDTH, EPAPER_HEIGHT+100, 100]);
+  translate([edge_width,edge_width,-1])
+  cube([EPAPER_WIDTH - 2 * EPAPER_EDGE_WIDTH, height - 2 * edge_width, 100]);
 
   //space for connector
   translate([edge_width,edge_width + BOTTOM_TO_CONNECTOR,backplate_thickness])
