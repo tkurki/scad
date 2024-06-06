@@ -17,7 +17,7 @@ thickness = 10;
 
 slot_slab_width = EPAPER_WIDTH;
 slot_slab_height = EPAPER_HEIGHT;
-slot_thickness_ = BOARD_THICKNESS + 1;
+slot_thickness = BOARD_THICKNESS + 1;
 
 $fn=25;
 
@@ -33,7 +33,7 @@ difference() {
   }
   //slot
   translate([edge_width-slotdepth,edge_width,thickness - slotoffset])
-  cube([slot_slab_width, height - (2 * edge_width), slot_thickness_]);
+  cube([slot_slab_width, height - (2 * edge_width), slot_thickness]);
 
   //opening
   translate([edge_width,edge_width,-1])
