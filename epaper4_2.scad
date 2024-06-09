@@ -21,11 +21,13 @@ slot_thickness = BOARD_THICKNESS + 1;
 
 $fn=25;
 
-screw_hole_radius = 2;
+screw_hole_radius = 1.3;
+nut_radius = 5.6 /2;
+nut_recess = 3;
 
 //for top
-rotate([180,0,0])
-translate([0,0,-thickness])
+// rotate([180,0,0])
+// translate([0,0,-thickness])
 
 difference() {
   union() {
@@ -41,25 +43,36 @@ difference() {
 
   //space for connector
   translate([-1,BOTTOM_TO_CONNECTOR + edge_width,-1])
-  cube([50, CONNECTOR_WIDTH, thickness +1 + 1 + slotdepth - slotoffset ]);
+  cube([50, CONNECTOR_WIDTH, 1 + thickness - slotoffset  + 0.05]);
 
 
   translate([edge_width / 2 ,edge_width / 2,-5])
   cylinder(h=thickness + 6,r= screw_hole_radius);
+  translate([edge_width / 2 ,edge_width / 2, -thickness + nut_recess]) 
+  cylinder(h=thickness,r= nut_radius);
+  
   translate([width -edge_width / 2 ,edge_width / 2,-5])
   cylinder(h=thickness + 6,r= screw_hole_radius);
+  translate([width -edge_width / 2 ,edge_width / 2, -thickness + nut_recess]) 
+  cylinder(h=thickness,r= nut_radius);
+
   translate([width -edge_width / 2 ,height - edge_width / 2,-5])
   cylinder(h=thickness + 6,r= screw_hole_radius);
+  translate([width -edge_width / 2 ,height - edge_width / 2, -thickness + nut_recess]) 
+  cylinder(h=thickness,r= nut_radius);
+
   translate([edge_width / 2 ,height - edge_width / 2,-5])
   cylinder(h=thickness + 6,r= screw_hole_radius);
+  translate([edge_width / 2 ,height - edge_width / 2, -thickness + nut_recess]) 
+  cylinder(h=thickness,r= nut_radius);
 
   // for bottom
-  //translate([-2,-2, thickness - slotoffset + 1])
-  //cube([width+4, height+4, thickness]);
+  // translate([-2,-2, thickness - slotoffset + 1])
+  // cube([width+4, height+4, thickness]);
 
   //for top
-  translate([-2,-2, -1])
-  cube([width+4, height+4, thickness - slotoffset + 2]);
+  // translate([-2,-2, -1])
+  // cube([width+4, height+4, thickness - slotoffset + 2]);
 
 }
 
