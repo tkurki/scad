@@ -25,6 +25,10 @@ screw_hole_radius = 1.3;
 nut_radius = 5.6 /2;
 nut_recess = 3;
 
+attachment_distance = 82;
+attachment_screw_hole_radius = 2;
+attachment_nut_radius = 8 / 2;
+
 //for top
 // rotate([180,0,0])
 // translate([0,0,-thickness])
@@ -43,9 +47,10 @@ difference() {
 
   //space for connector
   translate([-1,BOTTOM_TO_CONNECTOR + edge_width,-1])
-  cube([50, CONNECTOR_WIDTH, 1 + thickness - slotoffset  + 0.05]);
+  cube([50, CONNECTOR_WIDTH, 1 + thickness - slotoffset  + slot_thickness + 0.05]);
 
 
+  // corner screw holes
   translate([edge_width / 2 ,edge_width / 2,-5])
   cylinder(h=thickness + 6,r= screw_hole_radius);
   translate([edge_width / 2 ,edge_width / 2, -thickness + nut_recess]) 
@@ -66,9 +71,20 @@ difference() {
   translate([edge_width / 2 ,height - edge_width / 2, -thickness + nut_recess]) 
   cylinder(h=thickness,r= nut_radius);
 
+  // attachment screw holes
+  translate([(width - attachment_distance) / 2 ,edge_width / 2,-5])
+  cylinder(h=thickness + 6,r= attachment_screw_hole_radius);
+  translate([(width - attachment_distance) / 2 ,edge_width / 2, 3]) 
+  cylinder(h=thickness,r= attachment_nut_radius);
+  
+  translate([width - (width - attachment_distance) / 2 ,edge_width / 2,-5])
+  cylinder(h=thickness + 6,r= attachment_screw_hole_radius);
+  translate([width - (width - attachment_distance) / 2 ,edge_width / 2, 3]) 
+  cylinder(h=thickness,r= attachment_nut_radius);
+
   // for bottom
-  // translate([-2,-2, thickness - slotoffset + 1])
-  // cube([width+4, height+4, thickness]);
+  translate([-2,-2, thickness - slotoffset + 1])
+  cube([width+4, height+4, thickness]);
 
   //for top
   // translate([-2,-2, -1])
