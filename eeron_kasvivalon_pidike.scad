@@ -5,13 +5,16 @@ EDGE_INSET = 5;
 LENGTH = 80;
 EDGE_WIDTH = EDGE_PROFILE_THICKNESS / 3;
 
-HEIGHT = EDGE_WIDTH + EDGE_PROFILE_THICKNESS + 2 + (HOLE_RADIUS * 2) + 5;
+HEIGHT = EDGE_WIDTH + EDGE_PROFILE_THICKNESS + 2;// + (HOLE_RADIUS * 2) + 5;
 
 THICKNESS = 4;
 
 difference() {
   union() {
       cube([LENGTH, HEIGHT, THICKNESS]);
+
+      translate([HOLE_RADIUS*2.2, HOLE_RADIUS*2.3, 0])
+      cylinder(THICKNESS, r = HOLE_RADIUS * 2.2);
   }
   
   translate([EDGE_WIDTH,EDGE_WIDTH,-1])
@@ -22,5 +25,9 @@ difference() {
   
   translate([EDGE_WIDTH + EDGE_PROFILE_THICKNESS + HOLE_RADIUS + EDGE_INSET,EDGE_WIDTH + EDGE_PROFILE_THICKNESS + HOLE_RADIUS,-1])
   cylinder(THICKNESS+2,r= HOLE_RADIUS);
+  
+  
+  translate([55,EDGE_WIDTH,-1])
+  cube([100, 100, THICKNESS +2]);
 
 }
