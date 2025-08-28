@@ -1,0 +1,106 @@
+<svg width="380" height="203" viewBox="0 0 380 203" xmlns="http://www.w3.org/2000/svg">
+
+
+  <defs>
+    <!-- Define a mask for the holes -->
+    <mask id="hole-mask">
+      <!-- Everything white is visible, everything black is transparent (a hole) -->
+      <rect x="0" y="0" width="380" height="203" fill="white" />
+      
+      <!-- Staggered black circles for the holes.
+           They are arranged in rows, with alternating rows shifted. -->
+      <g fill="black">
+        <!-- Hole radius is 10. Separation is 5.
+             Distance between centers is 2 * 10 + 5 = 25.
+             Holes are centered within the 340x160 area. -->
+        <!-- Row 1 (y = 41.5) -->
+        <circle cx="45" cy="41.5" r="10" />
+        <circle cx="70" cy="41.5" r="10" />
+        <circle cx="95" cy="41.5" r="10" />
+        <circle cx="120" cy="41.5" r="10" />
+        <circle cx="145" cy="41.5" r="10" />
+        <circle cx="170" cy="41.5" r="10" />
+        <circle cx="195" cy="41.5" r="10" />
+        <circle cx="220" cy="41.5" r="10" />
+        <circle cx="245" cy="41.5" r="10" />
+        <circle cx="270" cy="41.5" r="10" />
+        <circle cx="295" cy="41.5" r="10" />
+        <circle cx="320" cy="41.5" r="10" />
+
+        <!-- Row 2 (y = 66.5), shifted -->
+        <circle cx="57.5" cy="66.5" r="10" />
+        <circle cx="82.5" cy="66.5" r="10" />
+        <circle cx="107.5" cy="66.5" r="10" />
+        <circle cx="132.5" cy="66.5" r="10" />
+        <circle cx="157.5" cy="66.5" r="10" />
+        <circle cx="182.5" cy="66.5" r="10" />
+        <circle cx="207.5" cy="66.5" r="10" />
+        <circle cx="232.5" cy="66.5" r="10" />
+        <circle cx="257.5" cy="66.5" r="10" />
+        <circle cx="282.5" cy="66.5" r="10" />
+        <circle cx="307.5" cy="66.5" r="10" />
+        <circle cx="332.5" cy="66.5" r="10" />
+
+        <!-- Row 3 (y = 91.5) -->
+        <circle cx="45" cy="91.5" r="10" />
+        <circle cx="70" cy="91.5" r="10" />
+        <circle cx="95" cy="91.5" r="10" />
+        <circle cx="120" cy="91.5" r="10" />
+        <circle cx="145" cy="91.5" r="10" />
+        <circle cx="170" cy="91.5" r="10" />
+        <circle cx="195" cy="91.5" r="10" />
+        <circle cx="220" cy="91.5" r="10" />
+        <circle cx="245" cy="91.5" r="10" />
+        <circle cx="270" cy="91.5" r="10" />
+        <circle cx="295" cy="91.5" r="10" />
+        <circle cx="320" cy="91.5" r="10" />
+
+        <!-- Row 4 (y = 116.5), shifted -->
+        <circle cx="57.5" cy="116.5" r="10" />
+        <circle cx="82.5" cy="116.5" r="10" />
+        <circle cx="107.5" cy="116.5" r="10" />
+        <circle cx="132.5" cy="116.5" r="10" />
+        <circle cx="157.5" cy="116.5" r="10" />
+        <circle cx="182.5" cy="116.5" r="10" />
+        <circle cx="207.5" cy="116.5" r="10" />
+        <circle cx="232.5" cy="116.5" r="10" />
+        <circle cx="257.5" cy="116.5" r="10" />
+        <circle cx="282.5" cy="116.5" r="10" />
+        <circle cx="307.5" cy="116.5" r="10" />
+        <circle cx="332.5" cy="116.5" r="10" />
+
+        <!-- Row 5 (y = 141.5) -->
+        <circle cx="45" cy="141.5" r="10" />
+        <circle cx="70" cy="141.5" r="10" />
+        <circle cx="95" cy="141.5" r="10" />
+        <circle cx="120" cy="141.5" r="10" />
+        <circle cx="145" cy="141.5" r="10" />
+        <circle cx="170" cy="141.5" r="10" />
+        <circle cx="195" cy="141.5" r="10" />
+        <circle cx="220" cy="141.5" r="10" />
+        <circle cx="245" cy="141.5" r="10" />
+        <circle cx="270" cy="141.5" r="10" />
+        <circle cx="295" cy="141.5" r="10" />
+        <circle cx="320" cy="141.5" r="10" />
+
+        <!-- Row 6 (y = 166.5), shifted -->
+        <circle cx="57.5" cy="166.5" r="10" />
+        <circle cx="82.5" cy="166.5" r="10" />
+        <circle cx="107.5" cy="166.5" r="10" />
+        <circle cx="132.5" cy="166.5" r="10" />
+        <circle cx="157.5" cy="166.5" r="10" />
+        <circle cx="182.5" cy="166.5" r="10" />
+        <circle cx="207.5" cy="166.5" r="10" />
+        <circle cx="232.5" cy="166.5" r="10" />
+        <circle cx="257.5" cy="166.5" r="10" />
+        <circle cx="282.5" cy="166.5" r="10" />
+        <circle cx="307.5" cy="166.5" r="10" />
+        <circle cx="332.5" cy="166.5" r="10" />
+
+      </g>
+    </mask>
+  </defs>
+
+  <rect class="rounded-rect" x="0" y="0" width="380" height="203" rx="70" ry="70" mask="url(#hole-mask)" />
+
+</svg>
